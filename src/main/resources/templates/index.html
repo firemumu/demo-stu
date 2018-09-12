@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:src="@{bootstrap-3.3.7/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:src="@{bootstrap-3.3.7/css/bootstrap-theme.min.css}" rel="stylesheet">
+    <!-- 可以看到 thymeleaf 是通过在标签里添加额外属性来绑定动态数据的 -->
+    <title th:text="${title}">Title</title>
+
+</head>
+<body>
+    <div class="panel panel-primary">
+        <h1 th:text="${desc}">Hello World</h1>
+        <div class="panel-heading">
+            <h2>学生信息</h2>
+        </div>
+        <div class="panel-body">
+            <p th:text="${student.name}"></p>
+            <p th:text="${student.age}"></p>
+            <p th:text="${student.email}"></p>
+        </div>
+    </div>
+
+<script th:src="@{jquery-3.3.1/jquery.min.js}" type="text/javascript"></script>
+<script th:src="@{bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+</body>
+</html>
